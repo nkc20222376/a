@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9x9 Table with JavaScript</title>
+  <style>
+    body {
+	background-color: rgb(78, 76, 76);
+}
+    table {
+      color: aliceblue;
+      border-collapse: collapse;
+       margin: 50px auto;
+    }
+
+    td, th {
+      color: aliceblue;
+      border: 2px solid aliceblue;
+      padding: 10px;
+      text-align: center;
+    }
+    td{
+      background-color: rgb(119, 80, 80);
+    }
+  
+  </style>
+</head>
+<body>
+  <input type="button" value="表示" onclick=clickthis()>
+
+  <table id="multiplicationTable">
+    <caption>9x9 Table</caption>
+    <tbody></tbody>
+
+  </table>
+
+  <script>
+    // JavaScript code to generate the table
+    function clickthis(){
+      
+      const tableBody = document.querySelector('#multiplicationTable tbody');
+
+for (let i = 3; i <= 6; i++) {
+  const row = document.createElement('tr');
+
+  for (let j = 1; j <= 9; j++) {
+    const cell = document.createElement('td');
+  
+    cell.textContent = i*j;
+    row.appendChild(cell);
+    
+  }
+
+  tableBody.appendChild(row);
+}
+    }
+    
+  </script>
+
+</body>
+</html>
